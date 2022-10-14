@@ -1,0 +1,169 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/10/2022, 09:24:23 AM
+    Author     : Santiago
+*/
+*{
+   box-sizing: border-box;
+}
+.products-preview{
+    position: fixed;
+    top:0; left:0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .products-preview .preview{
+    display: inline-block;
+    padding:2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin:auto;
+    width: 60%;
+    border-radius: 10px;
+ }
+
+ .products-preview .preview .fa-times-circle{
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   font-size: 30px;
+   color: grey;
+   animation-name: botonSalir;
+   animation-duration: 1s;
+}
+
+.products-preview .preview .fa-times-circle:hover{
+   font-size: 35px;
+   color: red;
+}
+
+@keyframes botonSalir{
+   0%    { opacity: 0;  transform:translateX(40px);}
+   20%   { opacity: 0; transform:translateX(20px);}
+   40%   { opacity: 1; transform:translateX(0px); color: black;}
+   60%   { opacity: 1; transform: translateX(-10px);}
+   80%   { opacity: 1; transform: translateX(-5px);}
+   100%  { opacity: 1;}
+}
+.preview div input{
+   outline: none;
+   font-size: 20px;
+   line-height: 30px;
+   padding-left: 5px;
+   margin: 1% 0;
+}
+.preview div input:focus{
+   border: 3px solid rgba(16, 116, 216, 0.822);
+}
+.preview div input:valid{
+   background-color: rgb(216, 236, 216);
+   border: 1px solid rgba(0, 0, 0, 0.483);
+}
+#nombre, #apellido, #email, #ide{
+   width: 100%;
+}
+#edad, #telefono{
+   width: 49%;
+}
+#edad{
+   margin-right: 1%;
+}
+#telefono{
+   margin-left: 1%;
+}
+.preview div #boton{
+   margin: 2%;
+   border: none;
+   background-color: rgb(12, 191, 36);
+   color: white;
+   font-weight: 800;
+   border-radius: 8px;
+   line-height: 20px;
+   font-size: 15px;
+   width: 30%;
+   height: 40px;
+}
+.preview div #boton:hover{
+   transform: scale(1.1);
+}
+
+div h1{
+   animation-name: tituloAgregar;
+   animation-duration: 2s;
+}
+@keyframes tituloAgregar {
+   from {
+      transform: scale(0);
+   } to {
+      transform: scale(1);
+   }
+}
+body .botton{
+   margin: 2%;
+   border: none;
+   background-color: rgb(12, 191, 36);
+   color: white;
+   font-weight: 800;
+   border-radius: 8px;
+   padding: 1%;
+   width: 16%;
+   font-size: 15px;
+   float: right;
+}
+body .botton:hover{
+   transform: scale(1.01);
+   font-size: 16px;
+}
+.principal{
+   width: 89%;
+   margin: auto;
+}
+.principal h1{
+   text-align: center;
+}
+.dwr-table{
+   width: 96%;
+   font-family: arial;
+}
+.dwr-table th{
+   padding: 10px;
+   color: #ffffff;
+   background: #FFAB1A;
+}
+.dwr-table td{
+   text-align: center;
+   padding: 10px;
+}
+td form input{
+   border: none;
+   color: white;
+   font-weight: 600;
+   border-radius: 2px;
+   padding: 1%;
+   width: 47%;
+   height: 30px;
+}
+td form input:hover{
+   cursor: pointer;
+   transform: scale(1.05);
+}
+#eliminar{
+   background-color: rgba(223, 22, 22, 0.905);
+}
+#editar{
+   background-color: rgba(240, 206, 13, 0.905);
+}
+tbody tr:nth-child(even){
+    background-color: #ebebeb;
+}
+

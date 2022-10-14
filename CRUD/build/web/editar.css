@@ -1,0 +1,101 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13/10/2022, 01:19:07 PM
+    Author     : Santiago
+*/
+*{
+   box-sizing: border-box;
+}
+.products-preview{
+    position: fixed;
+    top:0; left:0;
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .products-preview .preview{
+    display: inline-block;
+    padding:2rem;
+    text-align: center;
+    background: #fff;
+    position: relative;
+    margin:auto;
+    width: 60%;
+    border-radius: 10px;
+ }
+
+ .products-preview .preview .fa-times-circle{
+   position: absolute;
+   top: 5px;
+   right: 5px;
+   font-size: 30px;
+   color: grey;
+   animation-name: botonSalir;
+   animation-duration: 1s;
+}
+.products-preview .preview .fa-times-circle:hover{
+   font-size: 35px;
+   color: red;
+}
+
+@keyframes botonSalir{
+   0%    { opacity: 0;  transform:translateX(40px);}
+   20%   { opacity: 0; transform:translateX(20px);}
+   40%   { opacity: 1; transform:translateX(0px); color: black;}
+   60%   { opacity: 1; transform: translateX(-10px);}
+   80%   { opacity: 1; transform: translateX(-5px);}
+   100%  { opacity: 1;}
+}
+.preview div form input{
+   outline: none;
+   font-size: 20px;
+   line-height: 30px;
+   padding-left: 5px;
+   margin: 1% 0;
+}
+.preview div form input:focus{
+   border: 3px solid rgba(16, 116, 216, 0.822);
+}
+.preview div form input:valid{
+   background-color: rgb(216, 236, 216);
+   border: 1px solid rgba(0, 0, 0, 0.483);
+}
+#nombre, #apellido, #email, #ide{
+   width: 100%;
+}
+#edad, #telefono{
+   width: 48.7%;
+}
+#edad{
+   margin-right: 1%;
+}
+#telefono{
+   margin-left: 1%;
+}
+.preview div form #boton{
+   margin: 2%;
+   border: none;
+   background-color: rgb(12, 191, 36);
+   color: white;
+   font-weight: 800;
+   border-radius: 8px;
+   line-height: 20px;
+   font-size: 15px;
+   width: 30%;
+   height: 40px;
+}
+.preview div form #boton:hover{
+   transform: scale(1.1);
+}
+#botonTrans{
+    display: none;
+}
+
