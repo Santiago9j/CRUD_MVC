@@ -1,3 +1,4 @@
+-- Creo la tabla usuario
 CREATE TABLE USUARIO(
   ID INTEGER,
   NOMBRE VARCHAR2(40),
